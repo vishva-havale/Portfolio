@@ -1,0 +1,72 @@
+
+.skilss-icon{
+    font-size: 3rem !important;
+}
+.skilss-icon:hover {
+    animation: bounce 0.8s;
+}
+.main-cont{
+    background-color: #f9f9ff;
+    /* height: calc(100vh - 56px); */
+}
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+@media (max-width:767px) {
+    .skilss-icon{
+        font-size: 2rem !important;
+    }
+}
+@keyframes snakeBorder {
+    0% {
+        border-image-source: linear-gradient(45deg, #FF9000, #FF9000, transparent, transparent);
+    }
+
+    25% {
+        border-image-source: linear-gradient(135deg, #FF9000, #FF9000, transparent, transparent);
+    }
+
+    50% {
+        border-image-source: linear-gradient(225deg, #FF9000, #FF9000, transparent, transparent);
+    }
+
+    75% {
+        border-image-source: linear-gradient(315deg, #FF9000, #FF9000, transparent, transparent);
+    }
+
+    100% {
+        border-image-source: linear-gradient(45deg, #FF9000, #FF9000, transparent, transparent);
+    }
+}
+
+.animation-div {
+    position: relative;
+}
+
+.animation-div::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 3px solid transparent;
+    border-image: linear-gradient(45deg, #FF9000, #FF9000, transparent, transparent) 1;
+    border-image-slice: 1;
+    animation: snakeBorder 4s linear infinite;
+}

@@ -1,0 +1,75 @@
+.navbar-nav .nav-item{
+    margin-right: 40px;
+}
+.btn-outline-success:hover{
+    background-color: white !important;
+    color: black;
+}
+a{
+    font-size: 16px;
+    font-family: "Space Mono", Arial, serif;
+    font-weight: 400;
+}
+a:hover{
+    color: #FF9000;
+}
+a:active{
+    color: #FF9000;
+}
+@keyframes snakeBorder {
+    0% {
+        border-image-source: linear-gradient(45deg, red, red, transparent, transparent);
+    }
+
+    25% {
+        border-image-source: linear-gradient(135deg, red, red, transparent, transparent);
+    }
+
+    50% {
+        border-image-source: linear-gradient(225deg, red, red, transparent, transparent);
+    }
+
+    75% {
+        border-image-source: linear-gradient(315deg, red, red, transparent, transparent);
+    }
+
+    100% {
+        border-image-source: linear-gradient(45deg, red, red, transparent, transparent);
+    }
+}
+
+.main-div {
+    position: relative;
+}
+
+.main-div::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, red, red, transparent, transparent) 1;
+    border-image-slice: 1;
+    animation: snakeBorder 4s linear infinite;
+}
+
+.skills {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.skills span {
+    opacity: 0;
+    display: inline-block;
+    animation: typeWriter 1s steps(20) forwards;
+}
+
+@keyframes typeWriter {
+    to {
+        opacity: 1;
+    }
+}
+

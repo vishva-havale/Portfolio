@@ -1,0 +1,60 @@
+<div class="container-fluid d-flex justify-content-center align-items-center vh-100">
+  <div
+    class="card p-4"
+    style="
+      height: 300px;
+      width: 400px;
+      box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+        rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    "
+  >
+    <div>
+      <h2 class="text-center">Login</h2>
+    </div>
+    <div class="user-input-wrp">
+      <input
+        class="form-control fullname inputText"
+        type="email"
+        aria-describedby="namehelp"
+        required
+      />
+      <span class="floating-label">Enter email</span>
+    </div>
+    <div class="user-input-wrp mt-3">
+      <input
+        class="form-control fullname inputText"
+        type="text"
+        aria-describedby="namehelp"
+        required
+      />
+      <span class="floating-label">Enter password</span>
+    </div>
+    <div class="text-end">
+      <a style="color: #0d6efd; cursor: pointer">Forgot password?</a>
+    </div>
+    <button
+      class="btn py-1 mb-5 mt-2 w-100 fw-bold"
+      style="height: 3rem; background-color: #0dcaf0"
+    >
+      Login
+    </button>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="upMove"></div>
+  <div class="ball" *ngIf="ballVisible"></div>
+  <!-- <div class="downMove">
+
+    </div> -->
+  <div
+    class="downMove"
+    [style.left.px]="divLeft"
+    [style.top.px]="divTop"
+    (mousedown)="onMouseDown($event)"
+    (document:mousemove)="onMouseMove($event)"
+    (mouseup)="onMouseUp()"
+    (touchstart)="onTouchStart($event)"
+    (document:touchmove)="onTouchMove($event)"
+    (touchend)="onTouchEnd()"
+  ></div>
+</div>

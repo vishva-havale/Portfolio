@@ -1,0 +1,36 @@
+.container{
+    width: 70%;
+    height: calc(100vh - 56px);
+    
+}
+.main-container{
+    /* background-image: url('src/assets/global-communication-background-business-network-design.jpg');
+    background-size: cover; */
+    background-color: #f9f9ff;
+}
+.message-div{
+    height: 90vh !important;
+}
+.form-control:focus{
+    box-shadow: unset;
+    border-color: unset;
+}
+.fa-brands{
+    font-size: 32px;
+    margin: 0 5px;
+}
+.message-div .card{
+    height: 75%;
+    width: 100%;
+}
+@media (max-width:767px) {
+    .message-div .card{
+        height: 90% !important;
+    }
+    .message-div{
+        height: 85vh !important;
+    }
+    .container{
+        width: 90% !important;
+    }
+}

@@ -1,0 +1,115 @@
+.container-fluid{
+    height: calc(100vh - 80px) !important;
+}
+.fullname {
+    font-family: Roboto, Arial, Times, serif;
+    font-weight: 500;
+    line-height: 33px;
+    font-size: 1.1rem;
+}
+
+.user-input-wrp {
+    position: relative;
+    width: 100%;
+}
+
+.user-input-wrp .inputText {
+    width: 100%;
+    outline: none;
+    box-shadow: none !important;
+}
+
+.user-input-wrp .floating-label {
+    position: absolute;
+    pointer-events: none;
+    color: #0000009e;
+    top: 10px;
+    left: 40px;
+    font-size: 1.1rem;
+    transition: 0.2s ease all;
+}
+
+.user-input-wrp input:focus~.floating-label,
+.user-input-wrp input:not(:focus):valid~.floating-label {
+    top: -9px;
+    left: 30px;
+    font-size: 13px;
+    opacity: 1;
+    background-color: #fff;
+}
+.upMove {
+    height: 30px;
+    width: 20%;
+    background-color: blue;
+    animation: 4s linear 1s infinite alternate none running moveRight;
+    position: relative;
+    top: 0;
+}
+
+.downMove {
+    height: 30px;
+    width: 20%;
+    background-color: blue;
+    position: relative;
+    top: 80%;
+    /* animation: 4s linear 1s infinite alternate-reverse none running moveRight; */
+}
+
+.ball {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: red;
+    position: relative;
+    animation: 8s linear 1s infinite alternate none running ballMove;
+}
+
+@keyframes moveRight {
+    from {
+
+        left: 0;
+    }
+
+    to {
+
+        left: calc(100% - 20%);
+    }
+
+}
+
+@keyframes ballMove {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    25% {
+        top: 80%;
+        left: 50%;
+    }
+
+    40% {
+        top: 50%;
+        left: 90%;
+    }
+
+    55% {
+        top: 0;
+        left: 70%;
+    }
+
+    75% {
+        top: 80%;
+        left: 46%;
+    }
+
+    97% {
+        top: 15%;
+        left: 0;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+    }
+}

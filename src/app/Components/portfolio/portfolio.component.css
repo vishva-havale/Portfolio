@@ -1,25 +1,16 @@
 .card{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-/* @keyframes snakeBorder {
-    0% {
-        border-image-source: linear-gradient(180deg, #FF9000, transparent, transparent, transparent);
+.project-img{
+    height: 350px;
+    width: 600px;
+}
+@media (max-width:767px) {
+    .project-img{
+        height: 175px;
+        width: 300px;
     }
-
-
-    50% {
-        border-image-source: linear-gradient(90deg, #FF9000, #FF9000, transparent, #FF9000);
-    }
-
-    75% {
-        border-image-source: linear-gradient(0deg, #FF9000, #FF9000, #FF9000, #FF9000);
-    }
-
-    100% {
-        border-image-source: linear-gradient(180deg, #FF9000, #FF9000, transparent, transparent);
-    }
-} */
-
+}
 @keyframes snakeBorder {
     0% {
             border-image-source: linear-gradient(180deg, transparent, transparent, transparent, transparent);

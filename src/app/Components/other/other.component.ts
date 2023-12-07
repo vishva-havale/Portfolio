@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./other.component.css']
 })
 export class OtherComponent {
+  gamevisible: boolean = false;
+  id: string = "";
+  pass: string = "";
   divWidth = 300;
   divHeight = 50;
   divLeft = 0;
@@ -45,5 +48,10 @@ onTouchMove(event: TouchEvent): void {
 onTouchEnd(): void {
   this.isDragging = false;
 }
+  loginadmin() {
+    if (this.id == "admin" && this.pass == "admin") {
+      this.gamevisible = true;
+    }
+  }
 
 }

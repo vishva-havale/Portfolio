@@ -1,4 +1,4 @@
-import { Component, NgZone, OnInit } from '@angular/core';
+import { Component, NgZone, OnInit,ElementRef } from '@angular/core';
 import { Product } from 'src/app/Models/product';
 import { ProductListService } from '../../product-list.service'
 
@@ -8,6 +8,11 @@ import { ProductListService } from '../../product-list.service'
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  onLinkClick(toggleButton: HTMLElement) {
+    debugger
+    toggleButton.click();
+  }
+
   lang: string = "";
   count: number = 0;
   langs: string[] = ["python", "java", "angular"];
@@ -28,21 +33,21 @@ export class NavbarComponent {
     }
   };
   ngOnInit(): void {
-    setInterval(() => {
-      debugger;
-      const currentLang = this.langs[this.count];
-      const currentChar = currentLang[this.lang.length]; // Get the next character
+    // setInterval(() => {
+    //   debugger;
+    //   const currentLang = this.langs[this.count];
+    //   const currentChar = currentLang[this.lang.length]; // Get the next character
 
-      if (currentChar) {
-        this.lang += currentChar;
-      } else {
-        // Reset the lang to an empty string when the entire word is processed
-        this.lang = "";
-        this.count = (this.count + 1) % this.langs.length;
-      }
-    },300)
+    //   if (currentChar) {
+    //     this.lang += currentChar;
+    //   } else {
+    //     // Reset the lang to an empty string when the entire word is processed
+    //     this.lang = "";
+    //     this.count = (this.count + 1) % this.langs.length;
+    //   }
+    // },300)
     debugger;
-    this.startChecking();
+    //this.startChecking();
     this.productService.getProducts().subscribe(
       (products) => {
         this.products = products;
@@ -67,7 +72,6 @@ export class NavbarComponent {
     const randomIndex = Math.floor(Math.random() * this.skills.length);
     this.currentSkill = this.skills[randomIndex];
   }
-
   getStudentDetails() {
     console.log(this.searchText);
     if (this.searchText in this.dictData) {

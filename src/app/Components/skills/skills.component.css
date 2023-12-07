@@ -9,6 +9,9 @@
     background-color: #f9f9ff;
     /* height: calc(100vh - 56px); */
 }
+.skill-container{
+    width: 60%;
+}
 @keyframes bounce {
 
     0%,
@@ -30,6 +33,9 @@
 @media (max-width:767px) {
     .skilss-icon{
         font-size: 2rem !important;
+    }
+    .skill-container{
+        width: 80%;
     }
 }
 @keyframes snakeBorder {
